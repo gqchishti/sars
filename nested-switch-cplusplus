@@ -1,0 +1,1380 @@
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+
+/*
+GULAM QADIR     BS(CS)-1B    ITCP ASSIGNMENT Q#2 NESTED SWITCH STATEMENT
+
+COMPILER USED = DEV-C++ 5.11
+
+CASE CAPITAL LETTER ACCEPTED ONLY
+
+ONLY SWITCH STATEMENT IS USED
+
+**************PROGRAM WILL QUIT IN CASE OF OUT OF RANGE VALUES*******************************
+***************************THIS IS DONE BECAUSE IF A CHAR WAS ENTERED IT RECORDED A JUNK VALUE***********************
+---------------------------------------------------------------------------------------------------------------------------------------------------
+CASE#1 of first switch is starting from line#33                  COMMENTS LEGEND:    SINGLE PLAYER      X FOR ALPHA,BRAVO ... etc  A.1 A.2 A.4 A.5
+CASE#2 of first switch is starting from line#431                                                        vice versa
+Default=1214                                                                         TWO PLAYER         2X FOR 1st ALPHA,BRAVO ... etc 2A.1 
+                                                                                                        vice versa
+                                                                                                        2.2X FOR 2nd APLHA,BRAVO ... etc 2.2A.1
+====================================================================================================================================================                                                                                                        
+*/
+
+{
+	cout<<"Welcome to GQ's Numeric GAME\n\nPress any key to begin\n"<<endl;
+	getch();
+	cout<<"Enter numeric '1' for Single Player and '2' for Two player mode\n"<<endl;
+	
+	int MODE;
+	
+	cin>> MODE;
+	
+	switch(MODE) //MAIN SWITCH
+	{
+	  case 1: // SINGLE PLAYER MODE
+	  	cout<<"You have selected SINGLE PLAYER MODE"<<endl;
+	  	cout<<"\nONLY CAPITAL CASE LETTERS ARE ACCEPTED"<<endl;
+	  	char HERO ; 
+	  	int first_value_sp,second_value_sp,third_value_sp,fourth_value_sp,fifth_value_sp;
+	  	int firstpoint,secondpoint,thirdpoint,fourthpoint,fifthpoint;
+	  	first_value_sp,second_value_sp,third_value_sp,fourth_value_sp,fifth_value_sp=0;                     //CLEARING JUNK VALUES
+	  	firstpoint,secondpoint,thirdpoint,fourthpoint,fifthpoint=0;                                          //CLEARING JUNK VALUES
+	  	int final_score;
+	  	
+	  	cout<<"Please select your HERO to proceed!\n";
+	  	cout<<"Enter 'A' for ALPHA\nEnter 'B' for BRAVO\nEnter 'C' for CHARLIE\nEnter 'D' for DELTA\n";
+	  	cin>>HERO;
+	  	
+		  
+		switch(HERO) //NESTED SWITCH#! FOR CASE 1 (SELECTION OF HEROS)
+	  	{
+		  case 'A': //ALPHA FOR PLAYER
+		  	cout<<"You have selected hero:'ALPHA'\n";
+		  	cout<<"Enter values from (1-500) ONLY\n";  
+		  	cout<<"Enter first value\n";
+		  	cin>>first_value_sp;
+		  	
+		  	switch(first_value_sp) //A.1
+			{
+			case 1 ... 100: 
+			firstpoint=10;
+		    break;
+		    case 101 ... 200: 
+			firstpoint=20;
+		    break;
+		    case 201 ... 500:
+			firstpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n"; 
+		  	cin>>second_value_sp;
+		  	switch(second_value_sp) //A.2
+			{
+			  	  
+		    case 1 ... 100: 
+			secondpoint=10;
+		    break;
+		    case 101 ... 200: 
+			secondpoint=20;
+		    break;
+		    case 201 ... 500:
+			secondpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>third_value_sp;
+		  	switch(third_value_sp) //A.3
+			{
+			  	  
+		    case 1 ... 100: 
+			thirdpoint=10;
+		    break;
+		    case 101 ... 200: 
+			secondpoint=20;
+		    break;
+		    case 201 ... 500:
+			secondpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>fourth_value_sp;
+		  	switch(fourth_value_sp) //A.4
+			{
+			  	  
+		    case 1 ... 100: 
+			fourthpoint=10;
+		    break;
+		    case 101 ... 200: 
+			fourthpoint=20;
+		    break;
+		    case 201 ... 500:
+			fourthpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>fifth_value_sp;
+		  	switch(fifth_value_sp) //A.5
+			{
+			  	  
+		    case 1 ... 100: 
+			fifthpoint=10;
+		    break;
+		    case 101 ... 200: 
+			fifthpoint=20;
+		    break;
+		    case 201 ... 500:
+			fifthpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	 
+		  	break;
+		   
+		  case 'B':  //BRAVO FOR PLAYER
+		    cout<<"You have selected hero:'BRAVO'\n";
+		    cout<<"Enter values from (1-500) ONLY\n";  
+		    cout<<"Enter first value\n";
+		  	cin>>first_value_sp;
+		  	switch(first_value_sp) //B.1
+			{
+			  	  
+		    case 1 ... 100: 
+			firstpoint=10;
+		    break;
+		    case 101 ... 200: 
+			firstpoint=20;
+		    break;
+		    case 201 ... 500:
+			firstpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>second_value_sp;
+		  	switch(second_value_sp) //B.2
+			{
+			  	  
+		    case 1 ... 100: 
+			secondpoint=10;
+		    break;
+		    case 101 ... 200: 
+			secondpoint=20;
+		    break;
+		    case 201 ... 500:
+			secondpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>third_value_sp;
+		  	switch(third_value_sp) //B.3
+			{
+			  	  
+		    case 1 ... 100: 
+			thirdpoint=10;
+		    break;
+		    case 101 ... 200: 
+			thirdpoint=20;
+		    break;
+		    case 201 ... 500:
+			thirdpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";	
+		  	cin>>fourth_value_sp;
+		  	switch(fourth_value_sp) //B.4
+			{
+			  	  
+		    case 1 ... 100: 
+			fourthpoint=10;
+		    break;
+		    case 101 ... 200: 
+			fourthpoint=20;
+		    break;
+		    case 201 ... 500:
+			fourthpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>fifth_value_sp;
+		  	switch(fifth_value_sp) //B.5
+			{
+			  	  
+		    case 1 ... 100: 
+			fifthpoint=10;
+		    break;
+		    case 101 ... 200: 
+			fifthpoint=20;
+		    break;
+		    case 201 ... 500:
+			fifthpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		    
+		    break;
+		   
+		  case 'C':  //CHARLIE FOR PLAYER
+			cout<<"You have selected hero:'CHARLIE'\n";
+			cout<<"Enter values from (1-500) ONLY\n";  
+			cout<<"Enter first value\n";
+		  	cin>>first_value_sp;
+		  	switch(first_value_sp) //C.1
+			{
+			  	  
+		    case 1 ... 100: 
+			firstpoint=10;
+		    break;
+		    case 101 ... 200: 
+			firstpoint=20;
+		    break;
+		    case 201 ... 500:
+			firstpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>second_value_sp;
+		  	switch(second_value_sp) //C.2
+			{
+			  	  
+		    case 1 ... 100: 
+			secondpoint=10;
+		    break;
+		    case 101 ... 200: 
+			secondpoint=20;
+		    break;
+		    case 201 ... 500:
+			secondpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>third_value_sp;
+		  	switch(third_value_sp) //C.3
+			{
+			  	  
+		    case 1 ... 100: 
+			thirdpoint=10;
+		    break;
+		    case 101 ... 200: 
+			thirdpoint=20;
+		    break;
+		    case 201 ... 500:
+			thirdpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>fourth_value_sp;
+		  	switch(fourth_value_sp) //C.4
+			{
+			  	  
+		    case 1 ... 100: 
+			fourthpoint=10;
+		    break;
+		    case 101 ... 200: 
+			fourthpoint=20;
+		    break;
+		    case 201 ... 500:
+			fourthpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>fifth_value_sp;
+		  	switch(fifth_value_sp) //C.5
+			{
+			  	  
+		    case 1 ... 100: 
+			fifthpoint=10;
+		    break;
+		    case 101 ... 200: 
+			fifthpoint=20;
+		    break;
+		    case 201 ... 500:
+			fifthpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+			
+		    break;
+		  
+		  case 'D':  //DELTA FOR PLAYER
+		    cout<<"You have selected hero:'DELTA'\n";
+		    cout<<"Enter values from (1-500) ONLY\n";  
+		    cout<<"Enter first value\n";
+		  	cin>>first_value_sp;
+		  	switch(first_value_sp) //D.1
+			{
+			  	  
+		    case 1 ... 100: 
+			firstpoint=10;
+		    break;
+		    case 101 ... 200: 
+			firstpoint=20;
+		    break;
+		    case 201 ... 500:
+			firstpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>second_value_sp;
+		  	switch(second_value_sp) //D.2
+			{
+			  	  
+		    case 1 ... 100: 
+			secondpoint=10;
+		    break;
+		    case 101 ... 200: 
+			secondpoint=20;
+		    break;
+		    case 201 ... 500:
+			secondpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>third_value_sp;
+		  	switch(third_value_sp) //D.3
+			{
+			  	  
+		    case 1 ... 100: 
+			thirdpoint=10;
+		    break;
+		    case 101 ... 200: 
+			thirdpoint=20;
+		    break;
+		    case 201 ... 500:
+			thirdpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>fourth_value_sp;
+		  	switch(fourth_value_sp) //D.4
+			{
+			  	  
+		    case 1 ... 100: 
+			fourthpoint=10;
+		    break;
+		    case 101 ... 200: 
+			fourthpoint=20;
+		    break;
+		    case 201 ... 500:
+			fourthpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>fifth_value_sp;
+		  	switch(fifth_value_sp) //D.5
+			{
+			  	  
+		    case 1 ... 100: 
+			fifthpoint=10;
+		    break;
+		    case 101 ... 200: 
+			fifthpoint=20;
+		    break;
+		    case 201 ... 500:
+			fifthpoint=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		    
+		    break;
+		  
+		  default: //WRONG CHOICE IS ENTERED IN HERO SELECTION
+		    cout<<"You have selected an INVALID OPTION\nPlease start again\n";
+			getch();
+            exit (0);
+	  			
+		 
+	    }
+	  	final_score=firstpoint+secondpoint+thirdpoint+fourthpoint+fifthpoint;
+	  	cout<<"YOU HAVE SCORED = "<<final_score<<endl;
+	  	cout<<"\n\nTHANKS FOR PLAYING\n"<<endl;
+	  	cout<<"CREDITS : GULAM QADIR\nBSCS-1B\n";
+	    break; //break for case#1 of switch#1
+	    
+	    
+	  case 2: // TWO PLAYER MODE                                                                                     //MODE#2 TWO PLAYERS
+	    cout<<"You have selected TWO PLAYER MODE"<<endl; 
+		char HERO_1,HERO_2;
+		cout<<"\nONLY CAPITAL CASE LETTERS ARE ACCEPTED"<<endl;
+		int hero1value_1,hero1value_2,hero1value_3,hero1value_4,hero1value_5,hero2value_1,hero2value_2,hero2value_3,hero2value_4,hero2value_5;
+		int hero1point_1,hero1point_2,hero1point_3,hero1point_4,hero1point_5,hero2point_1,hero2point_2,hero2point_3,hero2point_4,hero2point_5;
+		int score_player_1;
+		int score_player_2;
+		cout<<"Its Player#1 turn first\nPlease select hero for player#1"<<endl;
+		cout<<"Enter 'A' for ALPHA\nEnter 'B' for BRAVO\nEnter 'C' for CHARLIE\nEnter 'D' for DELTA\n";
+		cin>> HERO_1;
+		switch(HERO_1) //NESTED SWITCH#1 FOR CASE 2 (SELECTION OF HERO FOR PLAYER#1
+		{
+			case 'A':  //ALPHA FOR PLAYER#1
+			cout<<"Please enter 5 values from 1 to 500 and i will reward you points\nENJOY!!\n\n";
+		  	cout<<"Hero of PLAYER#1 is:'ALPHA'\n";
+		  	cout<<"Enter first value\n";
+		  	cin>>hero1value_1;
+		  	switch(hero1value_1) //2A.1
+			{
+			case 1 ... 100: 
+			hero1point_1=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_1=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_1=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>hero1value_2;
+		  	switch(hero1value_2) //2A.2
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_2=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_2=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_2=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>hero1value_3;
+		  	switch(hero1value_3) //2A.3
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_3=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_3=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_3=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>hero1value_4;
+		  	switch(hero1value_4) //2A.4
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_4=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_4=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_4=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>hero1value_5;
+		  	switch(hero1value_5) //2A.5
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_5=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_5=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_5=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	 
+		  	
+		 	break;
+		  
+		  case 'B':  //BRAVO FOR PLAYER#1
+		    cout<<"Please enter 5 values from 1 to 500 and i will reward you points\nENJOY!!\n\n";
+			cout<<"Hero of PLAYER#1 is:'BRAVO'\n";
+		    cout<<"Enter first value\n";
+		 	cin>>hero1value_1;
+		 	switch(hero1value_1) //2B.1
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_1=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_1=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_1=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>hero1value_2;
+		  	switch(hero1value_2) //2B.2
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_2=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_2=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_2=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>hero1value_3;
+		  	switch(hero1value_3) //2B.3
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_3=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_3=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_3=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>hero1value_4;
+		  	switch(hero1value_4) //2B.4
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_4=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_4=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_4=50;
+		  	break;	
+		  	default:
+		    cout<<"\nOUT OF RANGE\n";
+		    getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>hero1value_5;
+		  	switch(hero1value_5) //2B.5
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_5=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_5=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_5=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		    
+		    
+		    break;
+		  
+		  case 'C':  //CHARLIE FOR PLAYER#1
+            cout<<"Please enter 5 values from 1 to 500 and i will reward you points\nENJOY!!\n\n";		  
+		    cout<<"Hero of PLAYER#1 is:'CHARLIE'\n";
+			cout<<"Enter first value\n";
+		  	cin>>hero1value_1;
+		  	switch(hero1value_1) //2C.1
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_1=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_1=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_1=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>hero1value_2;
+		  	switch(hero1value_2) //2C.2
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_2=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_2=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_2=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>hero1value_3;
+		  	switch(hero1value_3) //2C.3
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_3=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_3=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_3=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>hero1value_4;
+		  	switch(hero1value_4) //2C.4
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_4=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_4=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_4=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>hero1value_5;
+		  	switch(hero1value_5) //2C.5
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_5=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_5=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_5=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+			
+			
+		    break;
+		  
+		  case 'D':  //DELTA FOR PLAYER#1
+		    cout<<"Please enter 5 values from 1 to 500 and i will reward you points\nENJOY!!\n\n";
+			cout<<"Hero of PLAYER#1 is:'DELTA'\n";
+		    cout<<"Enter first value\n";
+		  	cin>>hero1value_1;
+		  	switch(hero1value_1) //2D.1
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_1=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_1=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_1=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>hero1value_2;
+		  	switch(hero1value_2) //2D.2
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_2=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_2=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_2=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>hero1value_3;
+		  	switch(hero1value_3) //2D.3
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_3=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_3=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_3=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>hero1value_4;
+		  	switch(hero1value_4) //2D.4
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_4=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_4=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_4=50;
+		  	break;	
+		  	default:
+		    cout<<"\nOUT OF RANGE\n";
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>hero1value_5;
+		  	switch(hero1value_5) //2D.5
+			{ 	  
+		    case 1 ... 100: 
+			hero1point_5=10;
+		    break;
+		    case 101 ... 200: 
+			hero1point_5=20;
+		    break;
+		    case 201 ... 500:
+			hero1point_5=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		    
+		    
+		    break;
+		  
+		  default: //WRONG CHOICE IS ENTERED IN HERO SELECTION FOR PLAYER #1
+		    cout<<"Player#1 have selected an INVALID OPTION\nPlease start again\n";
+		    getch();
+            exit(0);
+		    	  	
+			
+		}
+		 cout<<"Its Player#2 Turn\nPlease select hero for player#2"<<endl;
+		 cout<<"Enter 'A' for ALPHA\nEnter 'B' for BRAVO\nEnter 'C' for CHARLIE\nEnter 'D' for DELTA\n";
+		 cin>> HERO_2;
+		 switch(HERO_2)       //NESTED SWITCH#1 FOR CASE 2 (SELECTION OF HERO FOR PLAYER#2       //PLAYER #2
+		{
+			case 'A':  //ALPHA FOR PLAYER#2
+		  	cout<<"Please enter 5 values from 1 to 500 and i will reward you points\nENJOY!!\n\n";
+			cout<<"Hero of PLAYER#2 is:'ALPHA'\n";
+		  	cout<<"Enter first value\n";
+		  	cin>>hero2value_1;
+		  	switch(hero2value_1) //2.2A.1
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_1=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_1=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_1=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>hero2value_2;
+		  	switch(hero2value_2) //2.2A.2
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_2=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_2=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_2=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>hero2value_3;
+		  	switch(hero2value_3) //2.2A.3
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_3=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_3=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_3=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>hero2value_4;
+		  	switch(hero2value_4) //2.2A.4
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_4=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_4=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_4=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>hero2value_5;
+		  	switch(hero2value_5) //2.2A.5
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_5=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_5=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_5=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	 
+		  	
+		 	break;
+		  
+		  case 'B':  //BRAVO FOR PLAYER#2
+		    cout<<"Please enter 5 values from 1 to 500 and i will reward you points\nENJOY!!\n\n";
+			cout<<"Hero of PLAYER#2 is:'BRAVO'\n";
+		    cout<<"Enter first value\n";
+		 	cin>>hero2value_1;
+		 	switch(hero2value_1) //2.2B.1
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_1=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_1=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_1=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>hero2value_2;
+		  	switch(hero2value_2) //2.2B.2
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_2=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_2=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_2=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>hero2value_3;
+		  	switch(hero2value_3) //2.2B.3
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_3=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_3=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_3=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>hero2value_4;
+		  	switch(hero2value_4) //2.2B.4
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_4=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_4=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_4=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>hero2value_5;
+		  	switch(hero2value_5) //2.2B.5
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_5=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_5=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_5=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		    
+		    
+		    break;
+		  
+		  case 'C':  //CHARLIE FOR PLAYER#2
+		    cout<<"Please enter 5 values from 1 to 500 and i will reward you points\nENJOY!!\n\n";
+			cout<<"Hero of PLAYER#2 is:'CHARLIE'\n";
+			cout<<"Enter first value\n";
+		  	cin>>hero2value_1;
+		  	switch(hero2value_1) //2.2C.1
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_1=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_1=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_1=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>hero2value_2;
+		  	switch(hero2value_2) //2.2C.2
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_2=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_2=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_2=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>hero2value_3;
+		  	switch(hero2value_3) //2.2C.3
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_3=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_3=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_3=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>hero2value_4;
+		  	switch(hero2value_4) //2.2C.4
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_4=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_4=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_4=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>hero2value_5;
+		  	switch(hero2value_5) //2.2C.5
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_5=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_5=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_5=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+			
+			
+		    break;
+		  
+		  case 'D':  //DELTA FOR PLAYER#2
+		    cout<<"Please enter 5 values from 1 to 500 and i will reward you points\nENJOY!!\n\n";
+			cout<<"Hero of PLAYER#2 is:'DELTA'\n";
+		    cout<<"Enter first value\n";
+		  	cin>>hero2value_1;
+		  	switch(hero2value_1) //2.2D.1
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_1=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_1=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_1=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter second value\n";
+		  	cin>>hero2value_2;
+		  	switch(hero2value_2) //2.2D.2
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_2=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_2=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_2=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter third value\n";
+		  	cin>>hero2value_3;
+		  	switch(hero2value_3) //2.2D.3
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_3=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_3=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_3=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fourth value\n";
+		  	cin>>hero2value_4;
+		  	switch(hero2value_4) //2.2D.4
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_4=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_4=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_4=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		  	cout<<"Enter fifith value\n";
+		  	cin>>hero2value_5;
+		  	switch(hero2value_5) //2.2D.5
+			{ 	  
+		    case 1 ... 100: 
+			hero2point_5=10;
+		    break;
+		    case 101 ... 200: 
+			hero2point_5=20;
+		    break;
+		    case 201 ... 500:
+			hero2point_5=50;
+		  	break;	
+		  	default:
+		  	cout<<"\nOUT OF RANGE\n";
+		  	getch();
+            exit(0);
+		  	break;	
+            }
+		    
+		    
+		    break;
+		  
+		  default: //WRONG CHOICE IS ENTERED IN HERO SELECTION FOR PLAYER#2
+		    cout<<"Player#2 have selected an INVALID OPTION\nPlease start again";
+		    getch();
+            exit(0);
+	
+	   }
+	  
+	  score_player_1=hero1point_1+hero1point_2+hero1point_3+hero1point_4+hero1point_5;
+	  score_player_2=hero2point_1+hero2point_2+hero2point_3+hero2point_4+hero2point_5;
+	  cout<<"Player One has scored = "<<score_player_1<<"\nPlayer Two has scored = "<<score_player_2<<endl;
+	   switch(score_player_1==score_player_2)          // RESULTS
+	    {
+		case 1: cout<<"Match Tied\n";   
+	    break;
+	    case 0:
+	    	switch(score_player_1<score_player_2)   
+	    	{
+	    		case 0: cout<<"Player One is the winner"<<endl;
+	    		break;
+	    		case 1: cout<<"Player Two is the winner"<<endl;
+	    		break;
+			}
+		break;	
+		default:cout<<"error";
+		getch();
+		exit(0);	
+		break;
+	    }
+		cout<<"\n\nTHANKS FOR PLAYING\n"<<endl;
+	    cout<<"\nCREDIT : GULAM QADIR\nBSCS-1B\n";   
+	   break; //break for case#2 of switch#1
+      
+	  
+	  default: // IF WRONG OPTION IS ENTERED IN MODE SELECTION
+		cout<<"You have selected an INVALID OPTION\nPlease start again";
+	}
+
+	  
+	  
+	  
+	
+	getch();
+	
+	
+	
+}
