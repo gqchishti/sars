@@ -1,0 +1,229 @@
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+
+/* 
+Gulam Qadir  MF-16-293
+ITCP Assignment #1
+Compiler used "Dev-C++ 5.11"
+
+TESTED
+
+Q#5.1 Nested If-Else Statement
+Saturday,October 8th, 2016
+
+
+PROGRAM SHOWS WRONG CHOICE ENTERED AND EXITS INCASE OF INVALID OPTION ENTERED
+PROGRAM SHOWS INCORRECT! IF WRONG ANSWER IS ENTERED
+PROGRAM SHOWS CORRECT! IF RIGHT ANSWER IS ENTERED
+*/ 
+
+
+
+using namespace std;
+
+int main()
+{
+cout<<"Welcome to GQ's Capital Quiz"<<endl;
+cout<<"Use 'Capital Case' letters only\n"<<endl;
+cout<<"Press any key to continue\n"<<endl;
+getch();
+cout<<"Enter 'A' to select Asia\nEnter 'E' to select Europe"<<endl;
+
+char Continent;
+cin>> Continent;
+
+if (Continent=='A')  // If Asia is selected
+{
+	cout<<"Select any country from the following"<<endl;
+	cout<<"Enter 'P' for Pakistan\nEnter 'I' for India\nEnter 'S' for Srilanka\nEnter 'B' for Bangladesh"<< endl;
+	char Country_Name;
+	cin>>Country_Name;
+	
+	if (Country_Name=='P') //Pakistan
+	{
+		cout<<"What is the Capital of Pakistan"<<endl;
+		cout<<"Enter 'L' for Lahore\nEnter 'K' for Karachi\nEnter 'I' for Islamabad\nEnter 'R' for Rawalpindi\nEnter 'P' for Peshawar\n";
+		char Capital_Name;
+		cin>>Capital_Name;
+		if(Capital_Name=='I') //IF CORRECT LETTER IS ENTERED
+		{cout<<"Correct!\n";	
+		}
+		else if((Capital_Name=='L')||(Capital_Name=='K')||(Capital_Name=='R')||(Capital_Name=='P')) // INCASE OF WRONG LETTER/CHOICE
+		{cout<<"Incorrect!\n";	} //IF INCORRECT CAPITAL IS SELECTED
+	
+		else 
+	 
+		 {cout<<"Wrong Choice Entered"; } //Bad choice in capital selection of Pakistan
+				 
+	}
+	else
+	{
+	  if(Country_Name=='I') //INDIA
+	  {
+	  	cout<<"What is the Capital of India"<<endl;
+		cout<<"Enter 'K' for Kolkata\nEnter 'B' for Bangalore\nEnter 'D' for Delhi\nEnter 'C' for Chennai\nEnter 'M' for Mumbai\n";
+	  	char Capital_Name;
+	  	cin>>Capital_Name;
+	  	if(Capital_Name=='D') //IF CORRECT LETTER IS ENTERED
+	  	{cout<<"Correct!\n"; }
+	  	else if((Capital_Name=='K')||(Capital_Name=='B')||(Capital_Name=='C')||(Capital_Name=='M')) // INCASE OF WRONG LETTER/CHOICE
+		   
+		   { cout<<"Incorrect!\n";} //IF INCORRECT CAPITAL IS SELECTED
+	
+		else
+	  	   {cout<<"Wrong Choice Entered"; } //Bad choice in capital selection of India
+	    
+	 
+        }
+	 
+	  else
+	  {
+	  	if(Country_Name=='S') //Srilanka
+	  	{
+	  		cout<<"What is the Capital of Srilanka"<<endl;
+			cout<<"Enter 'K' for Kandy\nEnter 'C' for Colombo\nEnter 'S' for Sri Jayawardenapura Kotte\nEnter 'G' for Galle\nEnter 'N' for Negombo\n";
+	  		char Capital_Name;
+	  		cin>>Capital_Name;
+	  		if(Capital_Name=='C') //IF CORRECT LETTER IS ENTERED
+	  		{cout<<"Correct!\n"; }
+	  		else if((Capital_Name=='K')||(Capital_Name=='S')||(Capital_Name=='G')||(Capital_Name=='N')) // INCASE OF WRONG LETTER/CHOICE
+		   
+		   { cout<<"Incorrect!\n";} //IF INCORRECT CAPITAL IS SELECTED
+	  		
+			else
+			{cout<<"Wrong Choice Entered";	} //Bad choice in capital selection of Srilanka
+		
+        }
+	
+		else
+		{
+			if(Country_Name=='B') //Bangladesh
+			{
+				cout<<"What is the Capital of Bangladesh"<<endl;
+				cout<<"Enter 'D' for Dhaka\nEnter 'C' for Chittagong\nEnter 'K' for Khulna\nEnter 'G' for Ghazipur\nEnter 'R' for Rangpur\n";
+				char Capital_Name;
+				cin>>Capital_Name;
+				if(Capital_Name=='D') //IF CORRECT LETTER IS ENTERED
+				{cout<<"Correct!\n"; }
+				else if((Capital_Name=='C')||(Capital_Name=='K')||(Capital_Name=='G')||(Capital_Name=='R')) // INCASE OF WRONG LETTER/CHOICE
+		   
+		           { cout<<"Incorrect!\n";} //IF INCORRECT CAPITAL IS SELECTED
+				
+		
+			   	else
+			  	{cout<<"Wrong Choice Entered"; 	} //Bad choice in capital selection of Bangladesh
+	    	
+	        }
+			else
+	    	{cout<<"Wrong Choice Entered";	} //Bad Choice in asian country selection
+			
+	    }   
+	  }
+	}
+	
+}
+else
+{
+ if(Continent=='E') // If Europe is selected
+ {
+ 	cout<<"Select any country from the following"<<endl;
+	cout<<"Enter 'A' for Austria\nEnter 'L' for Finland\nEnter 'F' for France\nEnter 'G' for Germany\n";
+ 	char Country_Name;
+ 	cin>>Country_Name;
+ 	
+ 	if(Country_Name=='A') // Austria
+ 	{cout<<"What is the Capital of Austria"<<endl;
+	 cout<<"Enter 'V' for Vienna\nEnter 'G' for Graz\nEnter 'L' for Linz\nEnter 'B' for Bregenz\nEnter 'S' for Sankt Pölten\n"; 
+	 char Capital_Name;
+	 cin>>Capital_Name;
+	 if(Capital_Name=='V') //IF CORRECT LETTER IS ENTERED
+	 {cout<<"Correct!"; }
+	
+	 else if((Capital_Name=='G')||(Capital_Name=='L')||(Capital_Name=='B')||(Capital_Name=='S')) // INCASE OF WRONG LETTER/CHOICE
+		   
+       { cout<<"Incorrect!\n";} //IF INCORRECT CAPITAL IS SELECTED
+	 
+	 else
+	 {cout<<"Wrong Choice Entered"; } //Bad choice in capital selection of Austria
+ 
+    
+ 
+    }
+    else
+    {
+    	if(Country_Name=='L') //Finland
+    	{cout<<"What is the Capital of Finland"<<endl;
+		 cout<<"Enter 'F' for Forssa\nEnter 'H' for Helsinki\nEnter 'A' for Alavus\nEnter 'K' for Kauniainen\nEnter 'M' for Mikkeli\n";
+    	 char Capital_Name;
+    	 cin>>Capital_Name;
+    	 if(Capital_Name=='H') //IF CORRECT LETTER IS ENTERED
+    	 {cout<<"Correct!";  }
+		 
+		 else if((Capital_Name=='F')||(Capital_Name=='A')||(Capital_Name=='K')||(Capital_Name=='M')) // INCASE OF WRONG LETTER/CHOICE
+		   
+		      { cout<<"Incorrect!\n";} //IF INCORRECT CAPITAL IS SELECTED
+		 	 
+		     else
+		      {cout<<"Wrong Choice Entered"; } //Bad choice in capital selection of Finland
+	
+	    
+	
+		}
+    	else
+    	{
+    	  if(Country_Name=='F') //France
+    		{cout<<"What is the Capital of France"<<endl;
+			 cout<<"Enter 'R' for Rennes\nEnter 'T' for Toulouse\nEnter 'N' for Nantes\nEnter 'P' for Paris\nEnter 'M' for Mulhouse\n";
+    		 char Capital_Name;
+    		 cin>>Capital_Name;
+    		 if(Capital_Name=='P') //IF CORRECT LETTER IS ENTERED
+    		 {cout<<"Correct!";  }
+			
+			 else if((Capital_Name=='R')||(Capital_Name=='T')||(Capital_Name=='N')||(Capital_Name=='M')) // INCASE OF WRONG LETTER/CHOICE
+		         
+				  { cout<<"Incorrect!\n";} //IF INCORRECT CAPITAL IS SELECTED
+		      	
+				  else
+			     
+				  {cout<<"Wrong Choice Entered";  } //Bad choice in capital selection of France
+			 
+		 
+            }
+		 
+		   else
+		   {
+		   	   if(Country_Name=='G') //Germany
+		   	   {cout<<"What is the Capital of Germany"<<endl;
+				cout<<"Enter 'B' for Berlin\nEnter 'D' for Dortmund\nEnter 'W' for Wuppertal\nEnter 'C' for Cologne\nEnter 'M' for Munich\n";
+		   	    char Capital_Name;
+		   	    cin>>Capital_Name;
+		   	   
+			     if(Capital_Name=='B') //IF CORRECT LETTER IS ENTERED
+		   	     {cout<<"Correct!";  }
+		   	   
+		   	   	 else if((Capital_Name=='D')||(Capital_Name=='W')||(Capital_Name=='C')||(Capital_Name=='M')) // INCASE OF WRONG LETTER/CHOICE
+		   
+		              { cout<<"Incorrect!\n";} //IF INCORRECT CAPITAL IS SELECTED
+		   	   
+			     else
+			     {cout<<"Wrong Choice Entered";  } //Bad choice in capital selection of Germany
+	       	
+	    
+	           }    
+			   else {cout<<"Wrong Choice Entered";  } // Bad Choice in european country selection
+		   }
+		
+     	}
+
+   }
+ }
+ else
+ {cout<<"Wrong Choice Entered\n"; } //If bad choice is entered in continent selection.
+
+}
+cout<<"\n\nThanks for playing\n";
+cout<<"\nCredit:\nGULAM QADIR\tBSCS-1B";
+getch();
+
+}
