@@ -1,0 +1,41 @@
+CREATE TABLE PERSON_gq(
+driver_id NUMBER(4),
+driver_name VARCHAR2(30)
+CONSTRAINT driver_name_nn NOT NULL,
+driver_address VARCHAR2(60),
+CONSTRAINT driver_id_mypk PRIMARY KEY(driver_id));
+
+
+CREATE TABLE CAR_gq(
+reg_no NUMBER(4),
+car_model VARCHAR2(30)
+CONSTRAINT car_model_mynn NOT NULL,
+m_year NUMBER(6),
+CONSTRAINT reg_no_mypk PRIMARY KEY(reg_no));
+
+
+CREATE TABLE ACCIDENT_gq(
+report_no NUMBER(4),
+acc_date DATE
+CONSTRAINT acc_date_mynn NOT NULL,
+location VARCHAR2(30),
+CONSTRAINT report_no_mypk PRIMARY KEY(report_no));
+
+**********************************************************************************
+
+SELECT constraint_name, column_name,
+search_condition
+
+SELECT constraint_name, constraint_type
+From user_cons_columns
+WHERE table_name='OWNS_GQ';
+FROM user_constraints
+WHERE table_name='OWNS_GQ';
+
+**********************************************************************************
+
+CREATE TABLE OWNS_gq(
+driver_id NUMBER(4),
+reg_no NUMBER(4),
+CONSTRAINT driver_id_myfk FOREIGN KEY (driver_id) REFERENCES person_gq(driver_id),
+CONSTRAINT reg_no_myfk FOREIGN KEY (reg_no) REFERENCES car_gq(reg_no));
