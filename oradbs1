@@ -1,0 +1,197 @@
+CREATE table gq_employees(
+e_id varchar2(10),
+e_name varchar2(20),
+e_address varchar2(60),
+e_age number(3),
+e_depcode varchar2(10),
+CONSTRAINT my_pk_gqkf PRIMARY KEY (e_id));
+
+////
+
+CREATE TABLE gq_esalary(
+emp_id varchar2(10),
+emp_salary number(10),
+emp_hra number(10),
+emp_DAT number(10),
+CONSTRAINT my_fk_gq FOREIGN KEY (emp_id) REFERENCES gq_employees(e_id));
+
+
+//
+
+INSERT into gq_employees VALUES
+('E101','Ali','1st Street, Lenovo',25,'D301');
+
+//
+INSERT into gq_esalary VALUES
+('E111',6000,200,120);
+
+SELECT * FROM gq_esalary;
+
+
+
+
+
+
+INSERT into gq_employees VALUES
+('E105','Shah','22t Street, Lenovo',35,'D707');
+
+SELECT * from gq_employees;
+
+INSERT into gq_employees VALUES
+('E106','Ali','2st S1231treet, Lenovo',23,'D707');
+
+SELECT * from gq_employees;
+INSERT into gq_employees VALUES
+('E107','Rehman','2st Str312eet, Lenovo',45,'D909');
+
+SELECT * from gq_employees;
+INSERT into gq_employees VALUES
+('E108','Shahza','2st Str31eet, Lenovo',36,'D110');
+
+SELECT * from gq_employees;
+INSERT into gq_employees VALUES
+('E109','Sha','2st Stree32t, Lenovo',46,'D202');
+
+SELECT * from gq_employees;
+INSERT into gq_employees VALUES
+('E110','Shahzd','2st Stre23et, Lenovo',47,'D301');
+
+SELECT * from gq_employees;
+
+INSERT into gq_employees VALUES
+('E111','Shahzaasd','2st Strsaeet, Lenovo',38,'D301');
+
+SELECT * from gq_employees;
+
+INSERT into gq_employees VALUES
+('E112','Shahzasda','2st Strseet, Lenovo',27,'D202');
+
+SELECT * from gq_employees;
+
+INSERT into gq_employees VALUES
+('E113','Shahzsdaaa','2st Strsdseet, Lenovo',26,'D302');
+
+SELECT * from gq_employees;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT into gq_esalary VALUES
+('E101',4000,1900,1500);
+
+SELECT * FROM gq_esalary;
+
+INSERT into gq_esalary VALUES
+('E102',4500,2200,2000);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E103',5000,2800,2200);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E104',7000,3000,2700);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E105',3000,15000,1200);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E106',5700,3000,2200);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E107',6200,3300,3000);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E108',5700,3700,3000);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E109',7500,4660,545);
+
+SELECT * FROM gq_esalary;
+
+INSERT into gq_esalary VALUES
+('E110',5000,300,100);
+
+SELECT * FROM gq_esalary;
+
+INSERT into gq_esalary VALUES
+('E111',6000,200,120);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E112',6000,200,120);
+
+SELECT * FROM gq_esalary;
+
+
+INSERT into gq_esalary VALUES
+('E113',6000,200,120);
+
+SELECT * FROM gq_esalary;
+
+
+
+
+
+
+
+
+UPDATE gq_employees
+SET e_age = e_age + 15 
+WHERE e_id='E107';
+Select * from gq_employees
+
+
+
+SELECT * from gq_employees where e_age BETWEEN 35 and 45;
+
+
+select UPPER(e_name) from gq_employees;
+select LOWER(e_name) from gq_employees;
+select INITCAP(e_name) from gq_employees;
+
+select substr(e_name,4,2) from gq_employees;
+select instr(e_name,'a') from gq_employees;
+select trim('h' from e_name) from gq_employees;
