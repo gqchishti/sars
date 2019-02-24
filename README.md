@@ -3,3 +3,4 @@ Some of my very first programs when i started learning programming, reminds me o
 
 In sha Allah will be updating from time to time.
 
+UPDATE : I didn't know how github actually works back then, it's kinda funny how i put all codes in one repository. Thank God no one can see what i did in my private repos back then xD
